@@ -1,16 +1,17 @@
 import React from 'react';
 import CartDrawer from '@components/common/elements/CartDrawer';
 
+import Footer from './Footer';
 import Header from './Header';
 
 import styles from './DefaultLayout.module.scss';
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = ({ children, layoutProps }) => {
     return (
         <div className={styles.layout}>
-            <Header />
+            {!layoutProps?.hideHeader && <Header />}
             <main className={styles.main}>{children}</main>
-            {/* <Footer /> */}
+            {!layoutProps?.hideFooter && <Footer />}
             <CartDrawer />
         </div>
     );

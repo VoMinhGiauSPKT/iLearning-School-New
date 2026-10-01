@@ -1,29 +1,40 @@
 import React from 'react';
-import { brandName, fixedPath } from '@constants';
+import useDevices from '@hooks/useDevices';
 
-import styles from './Footer.module.scss';
+import FooterDesktop from './desktop/FooterDesktop';
+import FooterMobile from './mobile/FooterMobile';
+import useFooter from './useFooter';
 
-const Footer = () => {
-    return (
-        <footer className={styles.footer}>
-            <div className={styles.container}>
-                <span className={styles.copyright}>
-                    &copy; {new Date().getFullYear()} {brandName}. All rights reserved.
-                </span>
-                <div className={styles.links}>
-                    <a className={styles.link} href={fixedPath.privacy} target="_blank" rel="noopener noreferrer">
-                        Privacy Policy
-                    </a>
-                    <a className={styles.link} href={fixedPath.help} target="_blank" rel="noopener noreferrer">
-                        Help
-                    </a>
-                    <a className={styles.link} href={fixedPath.aboutUs} target="_blank" rel="noopener noreferrer">
-                        About Us
-                    </a>
-                </div>
-            </div>
-        </footer>
-    );
+const FooterMobileConnected = (props) => {
+    const footerData = useFooter();
+    return <FooterMobile {...footerData} {...props} />;
 };
 
+const FooterDesktopConnected = (props) => {
+    const footerData = useFooter();
+    return <FooterDesktop {...footerData} {...props} />;
+};
+
+const Footer = ({ forceDevice, ...props }) => {
+    const { isMobile: detectedIsMobile } = useDevices();
+    const isMobile = forceDevice ? forceDevice === 'mobile' : detectedIsMobile;
+    const footerData = useFooter();
+
+    if (isMobile) {
+        return <FooterMobile {...footerData} {...props} />;
+    }
+
+    return <FooterDesktop {...footerData} {...props} />;
+};
+
+Footer.Desktop = FooterDesktopConnected;
+Footer.Mobile = FooterMobileConnected;
+
+export {
+    FooterDesktop,
+    FooterMobile,
+    FooterDesktopConnected,
+    FooterMobileConnected,
+    useFooter,
+};
 export default Footer;
