@@ -1,0 +1,403 @@
+.desktopSiteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(48, 48, 48, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+
+  .headerContainer {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-shrink: 0;
+  }
+
+  .brandLogo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+
+    .brandLogoImg {
+      width: 46px;
+      height: 44px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 10px rgba(0, 223, 154, 0.45));
+      transition: transform 0.2s ease;
+    }
+
+    &:hover .brandLogoImg {
+      transform: scale(1.05);
+    }
+
+    .logoText {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+
+      .logoMain {
+        font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.3px;
+      }
+
+      .logoSub {
+        font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+
+  /* Figma: Rectangle 26 & Search */
+  .headerSearch {
+    box-sizing: border-box;
+    position: relative;
+    width: 460px;
+    height: 60px;
+    background: #090c0f;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    transition: all 0.2s ease;
+
+    &:focus-within {
+      border-color: rgba(0, 223, 154, 0.5);
+      box-shadow: 0 0 0 2px rgba(0, 223, 154, 0.15);
+    }
+
+    .searchIcon {
+      width: 23px;
+      height: 23px;
+      color: #959595;
+      margin-right: 14px;
+      flex-shrink: 0;
+      transition: color 0.15s ease;
+    }
+
+    &:focus-within .searchIcon {
+      color: #ffffff;
+    }
+
+    input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+
+      &::placeholder {
+        font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        color: #959595;
+      }
+    }
+  }
+
+  /* Figma: Group 1 */
+  .headerRight {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-shrink: 0;
+  }
+
+  .desktopNav {
+    display: flex;
+    align-items: center;
+
+    .navList {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .navItem {
+        display: flex;
+        align-items: center;
+      }
+
+      .navLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #959595;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: color 0.15s ease;
+
+        &:hover,
+        &.active {
+          color: #ffffff;
+        }
+
+        .dropdownArrow {
+          color: #959595;
+          margin-left: 2px;
+          transition: transform 0.15s ease, color 0.15s ease;
+        }
+
+        &:hover .dropdownArrow {
+          color: #ffffff;
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+
+  /* Figma: Line 1 */
+  .headerDivider {
+    width: 1px;
+    height: 24px;
+    background-color: #959595;
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+
+  /* Figma: Log In & Rectangle 32 (SIGN) */
+  .headerAuthGroup {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+
+    .loginLink {
+      font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #959595;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.15s ease;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    .signBtn {
+      box-sizing: border-box;
+      width: 149px;
+      height: 60px;
+      background: #090c0f;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #959595;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: #ffffff;
+        background: #141a22;
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+
+    .headerCartBtn {
+      box-sizing: border-box;
+      position: relative;
+      width: 60px;
+      height: 60px;
+      background: #090c0f;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: #959595;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: #ffffff;
+        background: #141a22;
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+
+      .cartBadge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background: #00df9a;
+        color: #071511;
+        font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        min-width: 20px;
+        height: 20px;
+        padding: 0 4px;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  @media (max-width: 1680px) {
+    .headerRight {
+      gap: 32px;
+    }
+
+    .desktopNav .navList {
+      gap: 32px;
+    }
+
+    .headerAuthGroup {
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    .headerContainer {
+      padding: 0 24px;
+      gap: 20px;
+    }
+
+    .headerLeft {
+      gap: 24px;
+    }
+
+    .headerSearch {
+      width: 360px;
+      height: 52px;
+
+      input,
+      input::placeholder {
+        font-size: 17px;
+      }
+    }
+
+    .desktopNav .navList {
+      gap: 24px;
+
+      .navLink {
+        font-size: 17px;
+      }
+    }
+
+    .headerAuthGroup {
+      gap: 18px;
+
+      .loginLink {
+        font-size: 17px;
+      }
+
+      .signBtn {
+        width: 120px;
+        height: 52px;
+        font-size: 17px;
+      }
+
+      .headerCartBtn {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+
+  @media (max-width: 1120px) {
+    .headerSearch {
+      width: 260px;
+    }
+
+    .desktopNav .navList {
+      gap: 16px;
+
+      .navLink {
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    height: 76px;
+
+    .headerContainer {
+      padding: 0 16px;
+    }
+
+    .headerSearch {
+      display: none;
+    }
+
+    .desktopNav {
+      display: none;
+    }
+
+    .headerDivider {
+      display: none;
+    }
+
+    .headerAuthGroup {
+      gap: 12px;
+
+      .loginLink {
+        font-size: 15px;
+      }
+
+      .signBtn {
+        width: 90px;
+        height: 42px;
+        font-size: 15px;
+      }
+
+      .headerCartBtn {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+}

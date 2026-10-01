@@ -1,0 +1,49 @@
+.partnerCalloutSection {
+  width: 100%;
+  padding: 60px 24px;
+  display: flex;
+  justify-content: center;
+
+  .calloutBox {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 876px;
+    min-height: 282px;
+    background: #15cca3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 32px;
+    box-shadow: 0 10px 30px rgba(21, 204, 163, 0.2);
+
+    .calloutInner {
+      width: 100%;
+      max-width: 670px;
+      text-align: center;
+
+      .calloutTitle {
+        font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+
+      .calloutDesc {
+        font-family: 'SF Pro Display', 'SF-Pro', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: #ffffff;
+        margin: 0;
+        opacity: 0.95;
+        white-space: pre-line;
+        word-break: break-word;
+      }
+    }
+  }
+}

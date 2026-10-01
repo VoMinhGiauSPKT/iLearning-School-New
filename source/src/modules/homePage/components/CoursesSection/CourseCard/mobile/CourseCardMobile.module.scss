@@ -1,0 +1,152 @@
+.courseCard {
+  box-sizing: border-box;
+  width: 100%;
+  background: #090c0f;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  .cardMedia {
+    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: 557 / 393;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #0e1319;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .cardInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .courseTitle {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 140%;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+    }
+
+    .coursePrice {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 140%;
+      color: #15cca3;
+      margin: 0 0 16px 0;
+    }
+
+    .benefitsList {
+      list-style: none;
+      margin: 0 0 20px 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .benefitItem {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        .triangleIcon {
+          width: 14px;
+          height: 14px;
+          flex-shrink: 0;
+          margin-top: 3px;
+        }
+
+        .benefitText {
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13.5px;
+          line-height: 20px;
+          color: #aeaeae;
+        }
+      }
+    }
+
+    .cardFooterAction {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+
+      .addToCartBtn {
+        box-sizing: border-box;
+        flex: 1;
+        height: 48px;
+        padding: 0 12px;
+        background: transparent;
+        border: 1.5px solid #15cca3;
+        border-radius: 12px;
+        color: #15cca3;
+        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.2s ease;
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+
+      .seeMoreBtn {
+        box-sizing: border-box;
+        flex: 1;
+        height: 48px;
+        background: #15cca3;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+
+        &:active {
+          transform: scale(0.98);
+        }
+
+        .seeMoreText {
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          color: #ffffff;
+        }
+
+        .seeMoreArrow {
+          color: #ffffff;
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+          &.rotated {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}

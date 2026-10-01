@@ -1,0 +1,21 @@
+REACT_APP_API = https://ai-project-api.moviehub.io.vn/
+REACT_APP_API_MEDIA = https://api-mediabucket.itzsolution.com/
+REACT_APP_PORTAL = https://vbook.itzsolution.com/
+REACT_APP_ENV = dev
+GENERATE_SOURCEMAP = false
+CI = false
+IMAGE_INLINE_SIZE_LIMIT = 0
+REACT_APP_ENABLE_EXPOSURE = true
+
+REACT_APP_IS_MOBILE = true
+
+REACT_APP_API_SSO = https://api-sso.itzsolution.com/
+REACT_APP_USERNAME = sso_client
+REACT_APP_PASSWORD = UbIkKSsgKGw3X3fXQFJuPhluaANrIhY9HVZmlzbnJdoEV9e8qAgt3K0lZlsriucBPG9TdWs5dIzLZDYQ
+
+
+REACT_APP_LOGIN_SSO_FE = https://openid-sso.itzsolution.com/
+REACT_APP_SECRET_ID = A3atcqWpxhitLiqHU3dxkUJeECdQ
+REACT_APP_APP_ID = 53
+
+REACT_APP_USER_KINDS = [ 2, 3 ]

@@ -1,0 +1,139 @@
+.partnersSection {
+  box-sizing: border-box;
+  padding: 80px 24px 100px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 40px 16px 60px;
+  }
+
+  .partnersCardBanner {
+    position: relative;
+    box-sizing: border-box;
+    background: #090C0F;
+    border-radius: 10px;
+    padding: 75px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    @media (max-width: 900px) {
+      padding: 40px 20px;
+      gap: 16px;
+    }
+
+    .partnerNavBtn {
+      box-sizing: border-box;
+      width: 56.67px;
+      height: 56.67px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      border: none;
+      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+
+      @media (max-width: 768px) {
+        width: 44px;
+        height: 44px;
+      }
+
+      &.navBtnLeft {
+        background: #202428;
+        color: #FFFFFF;
+
+        &:hover:not(:disabled) {
+          background: #2c3238;
+          transform: scale(1.05);
+        }
+      }
+
+      &.navBtnRight {
+        background: #15CCA3;
+        color: #FFFFFF;
+
+        &:hover:not(:disabled) {
+          opacity: 0.92;
+          transform: scale(1.05);
+          box-shadow: 0 4px 16px rgba(21, 204, 163, 0.4);
+        }
+      }
+
+      &:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+      }
+    }
+
+    .partnersLogosWrap {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+      overflow: hidden;
+
+      @media (max-width: 1200px) {
+        gap: 40px;
+      }
+
+      @media (max-width: 900px) {
+        gap: 24px;
+        justify-content: space-around;
+      }
+
+      .partnerItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        padding: 0 10px;
+
+        @media (max-width: 768px) {
+          height: 55px;
+          padding: 0 6px;
+        }
+
+        .partnerLogoImg {
+          max-height: 65px;
+          max-width: 180px;
+          object-fit: contain;
+          display: block;
+          transition: transform 0.25s ease;
+
+          @media (max-width: 1200px) {
+            max-height: 50px;
+            max-width: 140px;
+          }
+
+          @media (max-width: 768px) {
+            max-height: 38px;
+            max-width: 95px;
+          }
+
+          &:hover {
+            transform: scale(1.06);
+          }
+        }
+
+        .partnerFallbackText {
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-style: normal;
+          color: #FFFFFF;
+          font-size: 1.1rem;
+          font-weight: 700;
+
+          @media (max-width: 768px) {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.richTextViewer {
+    overflow-y: auto;
+    height: 100%;   
+    font-size: 14px;
+    line-height: 18px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    color: var(--text-primary-color);
+    font-family: Helvetica, Arial, sans-serif;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    ul, ol {
+        list-style: inside disc;
+        list-style-position: outside;
+        margin: 4px 0; 
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    em, i {
+        font-style: italic;
+    }
+}

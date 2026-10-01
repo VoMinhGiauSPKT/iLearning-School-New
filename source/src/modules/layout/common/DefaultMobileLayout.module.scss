@@ -1,0 +1,15 @@
+@import '@assets/scss';
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--il-bg-main, #182029);
+    color: var(--il-text-primary, #f1f5f9);
+}
+
+.main {
+    flex: 1;
+    width: 100%;
+}

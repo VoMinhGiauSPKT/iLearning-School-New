@@ -1,0 +1,224 @@
+.instructorSection {
+  box-sizing: border-box;
+  padding: 80px 24px;
+  width: 100%;
+  max-width: 1479px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 40px 16px;
+  }
+
+  .instructorMainCard {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 748px;
+    background: #090C0F;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 70px 80px;
+    gap: 70px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    @media (max-width: 1200px) {
+      padding: 50px 40px;
+      gap: 40px;
+    }
+
+    @media (max-width: 960px) {
+      flex-direction: column;
+      min-height: auto;
+      padding: 30px 20px 80px;
+      gap: 30px;
+    }
+
+    .instructorPhotoBox {
+      box-sizing: border-box;
+      width: 500px;
+      height: 500px;
+      flex-shrink: 0;
+      background: #202428;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center top;
+      overflow: hidden;
+
+      @media (max-width: 1200px) {
+        width: 380px;
+        height: 380px;
+      }
+
+      @media (max-width: 960px) {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
+    }
+
+    .instructorInfoBox {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .instructorQuoteWrap {
+        margin: 24px 0 28px 0;
+
+        .quotePara {
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 170%;
+          color: #AEAEAE;
+          margin: 0 0 16px 0;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          @media (max-width: 1200px) {
+            font-size: 18px;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 15px;
+            line-height: 160%;
+          }
+        }
+      }
+
+      .instructorIdentity {
+        .instructorName {
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 120%;
+          color: #AEAEAE;
+          margin: 0 0 6px 0;
+
+          @media (max-width: 768px) {
+            font-size: 24px;
+          }
+        }
+
+        .instructorRole {
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 170%;
+          color: #AEAEAE;
+
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .sliderDots {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @media (max-width: 960px) {
+        bottom: 25px;
+      }
+
+      .dot {
+        box-sizing: border-box;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #AEAEAE;
+        opacity: 0.45;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.25s ease;
+
+        &.active {
+          background: #15CCA3;
+          opacity: 1;
+          transform: scale(1.15);
+        }
+      }
+    }
+
+    .sliderArrows {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @media (max-width: 960px) {
+        position: static;
+        margin-top: 20px;
+        justify-content: flex-end;
+      }
+
+      .prevBtn {
+        box-sizing: border-box;
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        background: transparent;
+        border: 2px solid #555e69;
+        color: #AEAEAE;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover:not(:disabled) {
+          border-color: #15CCA3;
+          color: #15CCA3;
+        }
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+      }
+
+      .nextBtn {
+        box-sizing: border-box;
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        background: #15CCA3;
+        border: 2px solid #15CCA3;
+        color: #FFFFFF;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover:not(:disabled) {
+          opacity: 0.92;
+          transform: translateY(-1px);
+          box-shadow: 0 4px 16px rgba(21, 204, 163, 0.4);
+        }
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

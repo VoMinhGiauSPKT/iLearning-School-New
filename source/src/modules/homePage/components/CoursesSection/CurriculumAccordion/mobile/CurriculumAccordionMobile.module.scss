@@ -1,0 +1,118 @@
+.curriculumContainer {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 24px;
+
+  .curriculumHeading {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+  }
+
+  .stagesList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .stageCard {
+      background: #141c24;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: background 0.2s ease;
+
+      .stageHeaderBtn {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 14px 16px;
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        text-align: left;
+        gap: 12px;
+
+        .stageTitle {
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13.5px;
+          line-height: 140%;
+          color: #ffffff;
+          flex: 1;
+        }
+
+        .toggleIcon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+          color: #ffffff;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 1;
+        }
+      }
+
+      .stageBody {
+        box-sizing: border-box;
+        padding: 0 16px 16px 16px;
+
+        .lessonList {
+          list-style: none;
+          margin: 6px 0 0 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          .lessonItem {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 150%;
+            color: #aeaeae;
+          }
+        }
+      }
+    }
+  }
+
+  .curriculumActionWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+
+    .registerBtn {
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
+      background: #15cca3;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      color: #ffffff;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}

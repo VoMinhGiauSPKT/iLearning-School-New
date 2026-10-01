@@ -1,0 +1,19 @@
+.root {
+    .viewport {
+        overflow: hidden;
+        padding: 2px;
+        .container {
+            backface-visibility: hidden;
+            display: flex;
+            touch-action: pan-y;
+            gap: var(--slide-spacing);
+            padding-left: 0;
+            padding-right: 0;
+
+            .slide {
+                flex: 0 0 var(--slice-size, auto);
+                position: relative;
+            }
+        }
+    }
+}

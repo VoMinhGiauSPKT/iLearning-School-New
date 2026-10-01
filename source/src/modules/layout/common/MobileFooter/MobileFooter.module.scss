@@ -1,0 +1,36 @@
+@import '@assets/scss';
+
+.footer {
+    background: var(--footer-color);
+    color: var(--white);
+    padding: 2rem 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.copyright {
+    font-size: var(--small-font-size);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.link {
+    font-size: var(--small-font-size);
+    color: var(--white);
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,18 @@
+REACT_APP_API = https://ai-project-api.moviehub.io.vn/
+REACT_APP_API_SSO = https://sso-api-vbook.itz.io.vn/
+REACT_APP_API_MEDIA = https://itz-api.moviehub.io.vn/
+REACT_APP_PORTAL = https://portal-vbook.itz.io.vn/
+REACT_APP_ENV = beta
+GENERATE_SOURCEMAP = false
+CI = false
+IMAGE_INLINE_SIZE_LIMIT = 0
+REACT_APP_ENABLE_EXPOSURE = true
+REACT_APP_USERNAME = abc_client
+REACT_APP_PASSWORD = abc123
+REACT_APP_IS_MOBILE = true
+
+REACT_APP_LOGIN_SSO_FE = https://sso-openid-vbook.itz.io.vn/
+REACT_APP_SECRET_ID = vndcj82zboeh
+REACT_APP_APP_ID = 53
+
+REACT_APP_USER_KINDS = [ 2, 3 ]

@@ -1,0 +1,49 @@
+.sectionHeading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 32px;
+  }
+
+  &.alignCenter {
+    align-items: center;
+    text-align: center;
+  }
+
+  &.alignLeft {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .sectionSubtitle {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: inherit;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  .sectionTitle {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: inherit;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+}
